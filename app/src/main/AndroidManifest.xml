@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".VistaUniremington" />
+        <activity android:name=".Moodle" />
+        <activity android:name=".CorreoInst" />
+        <activity android:name=".Q10" />
+        <activity android:name=".ReciboMatricula"></activity>
     </application>
 
 </manifest>
