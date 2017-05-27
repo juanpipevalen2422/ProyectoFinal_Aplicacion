@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
     String validacion = "juan@gmail.com";
     String validacion2 = "juan1234";
     EditText correo;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent interfaz = new Intent(this,VistaUniremington.class);
             startActivity(interfaz);
         }else{
-            Toast.makeText(getApplicationContext(), "Contraseña Incorrecta, Ingresar Nuevamente", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Contraseña Incorrecta, Validar datos nuevamente", Toast.LENGTH_SHORT).show();
         }
 
     }
