@@ -35,7 +35,8 @@
         <activity android:name=".DirectorioAdministrativo" />
         <activity android:name=".LineamientosAcademicos" />
         <activity android:name=".Reglamento" />
-        <activity android:name=".ReservaEquipos"></activity>
+        <activity android:name=".ReservaEquipos" />
+        <activity android:name=".Especializaciones"></activity>
     </application>
 
 </manifest>

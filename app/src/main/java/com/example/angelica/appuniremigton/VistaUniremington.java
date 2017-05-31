@@ -229,9 +229,22 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
         egresados.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(VistaUniremington.this, "Nombre Seleccionado: "+ String.valueOf(egresados.getSelectedItem()),Toast.LENGTH_SHORT).show();
+                Toast.makeText(VistaUniremington.this, "Nombre Seleccionado: " + String.valueOf(egresados.getSelectedItem()), Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 1:
+                        Intent especia = new Intent(VistaUniremington.this, Especializaciones.class);
+                        startActivity(especia);
+                        break;
+                    case 2:
+                        Intent correoins = new Intent(VistaUniremington.this, CorreoInst.class);
+                        startActivity(correoins);
+                        break;
+                    case 3:
+                        Intent direcadm = new Intent(VistaUniremington.this, DirectorioAdministrativo.class);
+                        startActivity(direcadm);
+                        break;
+                }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -241,6 +254,24 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(VistaUniremington.this, "Nombre Seleccionado: "+ String.valueOf(administrativos.getSelectedItem()),Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 1:
+                        Intent q10 = new Intent(VistaUniremington.this, Q10.class);
+                        startActivity(q10);
+                        break;
+                    case 2:
+                        Intent correoins = new Intent(VistaUniremington.this, CorreoInst.class);
+                        startActivity(correoins);
+                        break;
+                    case 3:
+                        Intent direcadm = new Intent(VistaUniremington.this, DirectorioAdministrativo.class);
+                        startActivity(direcadm);
+                        break;
+                    case 4:
+                        Intent reseequ = new Intent(VistaUniremington.this, ReservaEquipos.class);
+                        startActivity(reseequ);
+                        break;
+                }
             }
 
             @Override
