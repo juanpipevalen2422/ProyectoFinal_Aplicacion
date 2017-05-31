@@ -36,7 +36,13 @@
         <activity android:name=".LineamientosAcademicos" />
         <activity android:name=".Reglamento" />
         <activity android:name=".ReservaEquipos" />
-        <activity android:name=".Especializaciones"></activity>
+        <activity android:name=".Especializaciones" />
+        <activity android:name=".Noticia1" />
+        <activity android:name=".Noticia2" />
+        <activity android:name=".Mision" />
+        <activity android:name=".Vision" />
+        <activity android:name=".PoliticaDatos" />
+        <activity android:name=".Ubicacion"></activity>
     </application>
 
 </manifest>

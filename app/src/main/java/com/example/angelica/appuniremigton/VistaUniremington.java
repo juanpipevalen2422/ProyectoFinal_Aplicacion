@@ -1,6 +1,8 @@
 package com.example.angelica.appuniremigton;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,8 +10,12 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +31,37 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
     Spinner docentes;
     Spinner egresados;
     Spinner administrativos;
+    ImageView noticia1;
+    ImageView noticia2;
+    ToggleButton botonCambio;
+    RadioGroup menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista_uniremington);
+        noticia1 =(ImageView) findViewById(R.id.noticia);
+        noticia2 = (ImageView) findViewById(R.id.noticia2);
+        botonCambio = (ToggleButton) findViewById(R.id.toggleButton);
+        botonCambio.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean On) {
+                if(On==true){
+                    noticia1.setImageDrawable();
+                    Intent not1 = new Intent(VistaUniremington.this, Noticia1.class);
+                    startActivity(not1);
+                }else{
+                    noticia2.getDrawable();
+                    Intent not2 = new Intent(VistaUniremington.this, Noticia2.class);
+                    startActivity(not2);
+                }
+            }
+
+
+
+        });
+
+        menu = (RadioGroup) findViewById(R.id.radiogroup);
         botonMoodle = (Button) findViewById(R.id.Moodle);
         botonMoodle.setOnClickListener(this);
         botonCorreo = (Button) findViewById(R.id.CorreoIns);
@@ -64,7 +96,7 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
         list.add("Reglamento Estudiantil");
         docentes = (Spinner) findViewById(R.id.docentes_Tutores);
         List list2 = new ArrayList();
-        list.add("DOCENTES-TUTORES");
+        list.add("DOCENTES_TUTORES");
         list.add("Plataforma Moodle");
         list.add("Plataforma Q10");
         list.add("Calendario Academico");
@@ -88,11 +120,6 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         aspirantes.setAdapter(arrayAdapter);
-        estudiantes.setAdapter(arrayAdapter);
-        docentes.setAdapter(arrayAdapter);
-        egresados.setAdapter(arrayAdapter);
-        administrativos.setAdapter(arrayAdapter);
-
         aspirantes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -139,6 +166,9 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
 
             }
         });
+        ArrayAdapter arrayAdapter1 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        estudiantes.setAdapter(arrayAdapter);
         estudiantes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -189,6 +219,9 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
 
             }
         });
+        ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        docentes.setAdapter(arrayAdapter);
         docentes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -226,6 +259,9 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
 
             }
         });
+        ArrayAdapter arrayAdapter4 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        egresados.setAdapter(arrayAdapter);
         egresados.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -250,6 +286,9 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
 
             }
         });
+        ArrayAdapter arrayAdapter5= new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        administrativos.setAdapter(arrayAdapter);
         administrativos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -277,6 +316,25 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        menu.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                if (checkedId == R.id.radioButton1) {
+                    Intent mision = new Intent(VistaUniremington.this, Mision.class);
+                    startActivity(mision);
+                } else if (checkedId == R.id.radioButton2){
+                    Intent vision = new Intent(VistaUniremington.this, Vision.class);
+                    startActivity(vision);
+                }else if(checkedId == R.id.radioButton3){
+                    Intent proda = new Intent(VistaUniremington.this, PoliticaDatos.class);
+                    startActivity(proda);
+                }else if(checkedId == R.id.radioButton4){
+                    Intent ubica = new Intent(VistaUniremington.this, Ubicacion.class);
+                    startActivity(ubica);
+                }
             }
         });
     }

@@ -63,7 +63,7 @@
                 app:layout_constraintVertical_bias="0.32" />
 
             <Spinner
-                android:id="@+id/docentes-Tutores"
+                android:id="@+id/docentes_Tutores"
                 android:layout_width="368dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimaryDark"
@@ -100,6 +100,41 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.32" />
+
+            <ImageView
+                android:id="@+id/noticia"
+                android:layout_width="375dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="1dp"
+                app:srcCompat="@drawable/noticia1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+            <ImageView
+                android:id="@+id/noticia2"
+                android:layout_width="375dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="1dp"
+                app:srcCompat="@drawable/noticia2"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ToggleButton"
+                android:textOn="NOTICIA 1"
+                android:textOff="NOTICIA 2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintVertical_bias="0.807" />
 
 
             <Button
@@ -149,6 +184,54 @@
                 android:gravity="center"
                 android:text="RECIBO DE MATRICULA"
                 android:textColor="@android:color/background_light" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="375dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="1dp"
+                app:srcCompat="@drawable/uniremington6" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.558">
+
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MISION" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="VISION" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="POLITICA PROTECCION DE DATOS" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+            </RadioGroup>
 
         </LinearLayout>
 
