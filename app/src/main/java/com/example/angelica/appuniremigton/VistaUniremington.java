@@ -47,11 +47,11 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean On) {
                 if(On==true){
-                    noticia1.setImageDrawable();
+                    noticia1.setBackgroundResource(R.drawable.noticia1);
                     Intent not1 = new Intent(VistaUniremington.this, Noticia1.class);
                     startActivity(not1);
                 }else{
-                    noticia2.getDrawable();
+                    noticia2.setBackgroundResource(R.drawable.noticia2);
                     Intent not2 = new Intent(VistaUniremington.this, Noticia2.class);
                     startActivity(not2);
                 }
@@ -326,14 +326,14 @@ public class VistaUniremington extends AppCompatActivity implements View.OnClick
                     Intent mision = new Intent(VistaUniremington.this, Mision.class);
                     startActivity(mision);
                 } else if (checkedId == R.id.radioButton2){
-                    Intent vision = new Intent(VistaUniremington.this, Vision.class);
-                    startActivity(vision);
+                    Intent sede1 = new Intent(VistaUniremington.this, Vision.class);
+                    startActivity(sede1);
                 }else if(checkedId == R.id.radioButton3){
-                    Intent proda = new Intent(VistaUniremington.this, PoliticaDatos.class);
-                    startActivity(proda);
+                    Intent sede2 = new Intent(VistaUniremington.this, Ubicacion.class);
+                    startActivity(sede2);
                 }else if(checkedId == R.id.radioButton4){
-                    Intent ubica = new Intent(VistaUniremington.this, Ubicacion.class);
-                    startActivity(ubica);
+                    Intent proteda = new Intent(VistaUniremington.this, PoliticaDatos.class);
+                    startActivity(proteda);
                 }
             }
         });

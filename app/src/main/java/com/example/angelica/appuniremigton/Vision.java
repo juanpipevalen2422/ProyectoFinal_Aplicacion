@@ -13,6 +13,6 @@ public class Vision extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vision);
         webviewvision = (WebView) findViewById(R.id.Vision);
-        webviewvision.loadUrl("");
+        webviewvision.loadUrl("http://www.uniremington.edu.co/manizales/792-sede-cable.html");
     }
 }

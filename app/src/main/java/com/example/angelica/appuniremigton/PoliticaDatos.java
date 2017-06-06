@@ -13,6 +13,6 @@ public class PoliticaDatos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_politica_datos);
         webpoliticadatos = (WebView) findViewById(R.id.Politicadatos);
-        webpoliticadatos.loadUrl("");
+        webpoliticadatos.loadUrl("http://www.uniremington.edu.co/manizales/politica-de-proteccion-de-datos-personales");
     }
 }

@@ -13,6 +13,6 @@ public class Mision extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mision);
         webviewmision = (WebView) findViewById(R.id.Mision);
-        webviewmision.loadUrl("");
+        webviewmision.loadUrl("http://www.uniremington.edu.co/manizales/general/uniremington/mision-vision.html");
     }
 }

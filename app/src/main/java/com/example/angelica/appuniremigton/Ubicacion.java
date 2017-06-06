@@ -13,6 +13,6 @@ public class Ubicacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubicacion);
         webviewubicacion = (WebView) findViewById(R.id.Ubicacion);
-        webviewubicacion.loadUrl("");
+        webviewubicacion.loadUrl("http://www.uniremington.edu.co/manizales/776-sedes-centro.html");
     }
 }
